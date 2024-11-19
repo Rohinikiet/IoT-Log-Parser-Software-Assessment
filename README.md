@@ -1,6 +1,6 @@
-# IoT-Log-Parser-Software-Assessment
+# Document
 
-This project implements an IoT log parser for the Smart City Living Lab, designed to process logs from various sensors and devices, extract meaningful data, decode Base64 images, and visualize results. The log parser handles web server logs (Apache/Nginx), structured data, and Base64 encoded images, providing a comprehensive dashboard for monitoring and analyzing the parsed data.
+This project implements an IoT log parser, designed to process logs from various sensors and devices, extract meaningful data, decode Base64 images, and visualize results. The log parser handles web server logs (Apache/Nginx), structured data, and Base64 encoded images, providing a comprehensive dashboard for monitoring and analyzing the parsed data.
 
 ## Table of Contents
 
