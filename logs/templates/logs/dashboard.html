@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #495057;
+            margin-top: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            animation: fadeInUp 1s ease-out;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        ul li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease-out;
+            max-width: 600px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        td {
+            background-color: #f8f9fa;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            ul li, table, .img-fluid {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mt-4">Log Parsing Dashboard</h1>
+
+        <h2>Error Logs</h2>
+        <ul>
+            {% for log in error_logs %}
+                <li>{{ log }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>JSON Data</h2>
+        <div>{{ json_table|safe }}</div>
+
+        <h2>Base64 Decoded Data</h2>
+        <div>{{ base64_table|safe }}</div>
+
+        <h2>Event Distribution</h2>
+        <img src="{{ event_dist_path }}" alt="Event Distribution Plot" class="img-fluid">
+
+        <h3>Performance Metrics</h3>
+        <ul>
+            <li>File Ingestion Time: {{ file_ingestion_time }}</li>
+            <li>Log Parsing Time: {{ parse_time }}</li>
+            <li>Plot Generation Time: {{ plot_time }}</li>
+            <li>Total Processing Time: {{ total_time }}</li>
+            <li>Data Ingestion to Visualization Time: {{ data_to_visualization_time }}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
