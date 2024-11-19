@@ -169,7 +169,7 @@ This IoT log parser is a comprehensive tool for analyzing and visualizing log da
 For any questions or issues, feel free to open an issue on the GitHub repository.
 
 
-**GitHub Repository:**(https://github.com/Rohinikiet/IoT-Log-Parser-Software-Assessment)(https://github.com/Rohinikiet/IoT-Log-Parser-Software-Assessment))
+**GitHub Repository:**(https://github.com/Rohinikiet/IoT-Log-Parser-Software-Assessment)
 
 
 This README provides a detailed overview of the project setup, execution, and additional considerations. You can adjust the instructions, especially the installation and screenshots, based on your actual project files and output.
