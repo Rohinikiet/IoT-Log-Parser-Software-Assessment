@@ -17,10 +17,11 @@ This project implements an IoT log parser for the Smart City Living Lab, designe
 To set up and run the IoT log parser project, follow these instructions:
 
 ### Prerequisites:
-- Python 3.8 or higher
-- Django 3.x or higher
+- Python 
+- Django 
 - Matplotlib
-- Other Python dependencies listed below
+- Pandas
+- Base64
 
 ### 1. Create and Activate a Virtual Environment
 It's recommended to use a virtual environment to manage dependencies:
